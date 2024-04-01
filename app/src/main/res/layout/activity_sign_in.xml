@@ -72,6 +72,7 @@
         android:layout_marginTop="52dp"
         android:backgroundTint="#0A24B5"
         android:text="Login"
+        android:onClick="retrieveData"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

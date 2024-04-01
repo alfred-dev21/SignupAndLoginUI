@@ -1,6 +1,6 @@
 Registration UI and functionality
 	* check All values have been inserted (done)
-	* check wether the passwords are the same (done)
+	* check whether the passwords are the same (done)
 	* check if the email is valid using regex (done)
 	* check if the email exists and if it does (done)
 		- the account should not be registered

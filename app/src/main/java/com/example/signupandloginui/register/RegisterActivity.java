@@ -38,6 +38,8 @@ public class RegisterActivity extends AppCompatActivity {
         password2 = passwordInput2.getText().toString();
 
         validateDetails();
+        nameInput.setText(""); emailInput.setText("");
+        passwordInput.setText(""); passwordInput2.setText("");
     }
 
     public void validateDetails(){
