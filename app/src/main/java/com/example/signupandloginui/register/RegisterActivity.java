@@ -40,31 +40,24 @@ public class RegisterActivity extends AppCompatActivity {
         validateDetails();
     }
 
-    public boolean testAllFilled(){
-        return  !username.isEmpty() &&
-                !email.isEmpty() &&
-                !password.isEmpty() &&
-                !password2.isEmpty();
-    }
-
     public void validateDetails(){
-        if (testAllFilled()){
-            if (password.equals(password2)){
-                doInsert(username, email, password);
-                Toast.makeText(this, "Your account was successfully created", Toast.LENGTH_SHORT).show();
-                doQuery();
-                return;
-            }
-            Toast.makeText(this, "passwords are not the same", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        Toast.makeText(this, "Fill all the required fields", Toast.LENGTH_SHORT).show();
+        ValidateDetails validate = new ValidateDetails(
+                myDB,
+                this,
+                username,
+                email,
+                password,
+                password2
+        );
 
+        if (validate.validateHandler()){
+            doInsert(username, email, password);
+        }
     }
 
     public void doInsert(String name, String email, String password){
-        String[] vals = {name,email, password};
-        myDB.doUpdate("Insert into userDetails(name, email, password) values (?,?,?);", vals);
+        String[] values = {name,email, password};
+        myDB.doUpdate("Insert into userDetails(name, email, password) values (?,?,?);", values);
     }
 
     public void clearData(){
