@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10sp"
+    android:layout_margin="10sp"
+    android:id="@+id/parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Celebrity Name"
+            android:id="@+id/txtName"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="jobTitle"
+            android:id="@+id/txtJobTitle"
+            android:textStyle="bold|italic"
+            android:textSize="16sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txtName"
+            android:layout_marginTop="10sp"
+            />
+
+        <ImageView
+            android:layout_width="150sp"
+            android:layout_height="200sp"
+            android:id="@+id/image"
+            android:layout_marginVertical="10sp"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_below="@+id/txtJobTitle"
+            android:scaleType="fitXY"
+            android:contentDescription="Celebrity Image" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
