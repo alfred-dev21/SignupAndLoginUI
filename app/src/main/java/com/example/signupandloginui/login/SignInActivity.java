@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.example.signupandloginui.MainActivity;
 import com.example.signupandloginui.R;
 import com.example.signupandloginui.database.DatabaseHandler;
+import com.example.signupandloginui.gallery.GalleryActivity;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -34,11 +35,14 @@ public class SignInActivity extends AppCompatActivity {
 
         email = inputEmail.getText().toString();
         password = inputPassword.getText().toString();
-        validateDetails();
+
+        if(validateDetails()){
+            toGallery();
+        }
     }
 
     public void toGallery(){
-        Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+        Intent intent = new Intent(SignInActivity.this, GalleryActivity.class);
         startActivity(intent);
     }
 
@@ -62,19 +66,19 @@ public class SignInActivity extends AppCompatActivity {
         return cursor.moveToNext();
     }
 
-    public void validateDetails(){
+    public boolean validateDetails(){
         if (allFilled()){
             if (!isValidEmail()){
                 Toast.makeText(this, "Please enter a valid email", Toast.LENGTH_SHORT).show();
-                return;
+                return false;
             }
             if (!isValidUser()){
                 Toast.makeText(this, "Either your password or email is incorrect", Toast.LENGTH_SHORT).show();
-                return;
+                return false;
             }
-            toGallery();;
-            return;
+            return true;
         }
         Toast.makeText(this, "Please fill all required fields", Toast.LENGTH_SHORT).show();
+        return false;
     }
 }

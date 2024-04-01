@@ -65,7 +65,7 @@ public class CelebAdapter extends RecyclerView.Adapter<CelebAdapter.ViewHolder> 
         return celebrities.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder{
         private final TextView txtName, txtJobTitle;
         private final CardView parent;
         private final ImageView image;

@@ -17,7 +17,7 @@ public class GalleryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery);
 
-        RecyclerView contactsView = findViewById(R.id.celebrityView);
+        RecyclerView celebrityView = findViewById(R.id.celebrityView);
         ArrayList<Celebrity> celebrities = new ArrayList<>();
 
         celebrities.add(new Celebrity("Megan Freedom", "Singer/Actor", "https://www.byrdie.com/thmb/RJcVfukdYM7aPMtVhje050P4MYw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-911199570-c7347dab092841efac74925488146989.jpg"));
@@ -27,10 +27,10 @@ public class GalleryActivity extends AppCompatActivity {
         celebrities.add(new Celebrity("Cardi B", "Singer", "https://footwearnews.com/wp-content/uploads/2019/10/cardi-b-two-tone-suit.jpg"));
         celebrities.add(new Celebrity("Quincy Rowland", "Model/Actor", "https://netstorage-briefly.akamaized.net/images/050b41a1dfe25c98.jpg"));
 
-        CelebAdapter contactsAdapter = new CelebAdapter(this);
-        contactsAdapter.setCelebrities(celebrities);
-        contactsView.setAdapter(contactsAdapter);
+        CelebAdapter celebAdapter = new CelebAdapter(this);
+        celebAdapter.setCelebrities(celebrities);
+        celebrityView.setAdapter(celebAdapter);
 
-        contactsView.setLayoutManager(new GridLayoutManager(this, 2));
+        celebrityView.setLayoutManager(new GridLayoutManager(this, 2));
     }
 }
