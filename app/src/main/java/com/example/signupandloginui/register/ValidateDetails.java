@@ -68,6 +68,7 @@ public class ValidateDetails {
                 Toast.makeText(context, "There already a user with that email", Toast.LENGTH_SHORT).show();
                 return false;
             }
+            Toast.makeText(context, "Your account has been successfully created", Toast.LENGTH_SHORT).show();
             return true;
         }
         Toast.makeText(context, "Please fill all the required fields", Toast.LENGTH_SHORT).show();
