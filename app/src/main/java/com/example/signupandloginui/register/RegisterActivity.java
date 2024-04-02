@@ -2,10 +2,12 @@ package com.example.signupandloginui.register;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.signupandloginui.R;
 import com.example.signupandloginui.database.DatabaseHandler;
+import com.example.signupandloginui.login.SignInActivity;
 
 import android.database.Cursor;
 import android.view.View;
@@ -77,5 +79,10 @@ public class RegisterActivity extends AppCompatActivity {
             System.out.println("alfred");
         }
         c.close();
+    }
+
+    public void toSignInPage(View view) {
+        Intent intent = new Intent(RegisterActivity.this, SignInActivity.class);
+        startActivity(intent);
     }
 }

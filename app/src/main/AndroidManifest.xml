@@ -16,9 +16,11 @@
             android:exported="false" />
         <activity
             android:name=".register.RegisterActivity"
+            android:label="Registration"
             android:exported="false" />
         <activity
             android:name=".login.SignInActivity"
+            android:label="Sign In"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

@@ -5,8 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".gallery.GalleryActivity"
-    android:padding="10sp"
-    android:background="#B9C69E63">
+    android:padding="10sp">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/outdoor"
+        android:scaleType="fitXY"
+        android:contentDescription="OUTDOOR" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="wrap_content"

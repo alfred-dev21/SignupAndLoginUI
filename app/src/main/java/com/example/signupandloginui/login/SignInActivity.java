@@ -13,6 +13,7 @@ import com.example.signupandloginui.MainActivity;
 import com.example.signupandloginui.R;
 import com.example.signupandloginui.database.DatabaseHandler;
 import com.example.signupandloginui.gallery.GalleryActivity;
+import com.example.signupandloginui.register.RegisterActivity;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -80,5 +81,10 @@ public class SignInActivity extends AppCompatActivity {
         }
         Toast.makeText(this, "Please fill all required fields", Toast.LENGTH_SHORT).show();
         return false;
+    }
+
+    public void toSignIn(View view) {
+        Intent intent = new Intent(SignInActivity.this, RegisterActivity.class);
+        startActivity(intent);
     }
 }
