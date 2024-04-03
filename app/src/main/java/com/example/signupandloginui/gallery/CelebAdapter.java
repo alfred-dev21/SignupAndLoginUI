@@ -13,6 +13,8 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.signupandloginui.R;
 
 import java.util.ArrayList;
@@ -54,9 +56,36 @@ public class CelebAdapter extends RecyclerView.Adapter<CelebAdapter.ViewHolder> 
             }
         });
 
+        int drawableId = 0;
+
+        switch (celebrities.get(position).getImageUrl()){
+            case "megan":
+                drawableId = R.drawable.megan;
+                break;
+            case "kanye":
+                drawableId = R.drawable.kanye;
+                break;
+            case "rihanna":
+                drawableId = R.drawable.rihanna;
+                break;
+            case "morgan":
+                drawableId = R.drawable.morgan;
+                break;
+            case "cardi":
+                drawableId = R.drawable.cardB;
+                break;
+            case "quincy":
+                drawableId = R.drawable.background1;
+                break;
+            default:
+                drawableId = R.drawable.background1;
+                break;
+        }
+
         Glide.with(context)
-                .asBitmap()
-                .load(celebrities.get(position).getImageUrl())
+                .load(drawableId)
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .apply(new RequestOptions())
                 .into(holder.image);
     }
 
