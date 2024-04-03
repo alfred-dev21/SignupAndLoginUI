@@ -2,7 +2,6 @@ package com.example.signupandloginui.gallery;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -32,6 +31,6 @@ public class GalleryActivity extends AppCompatActivity {
         celebAdapter.setCelebrities(celebrities);
         celebrityView.setAdapter(celebAdapter);
 
-        celebrityView.setLayoutManager(new LinearLayoutManager(this));
+        celebrityView.setLayoutManager(new GridLayoutManager(this, 2));
     }
 }

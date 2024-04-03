@@ -72,7 +72,7 @@ public class CelebAdapter extends RecyclerView.Adapter<CelebAdapter.ViewHolder> 
                 drawableId = R.drawable.morgan;
                 break;
             case "cardi":
-                drawableId = R.drawable.cardB;
+                drawableId = R.drawable.cardb;
                 break;
             case "quincy":
                 drawableId = R.drawable.background1;

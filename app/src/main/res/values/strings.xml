@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Celebrity Gallery</string>
+    <string name="mail_header">Mail</string>
+    <string name="inbox_text">Inbox</string>
+    <string name="outbox_text">Outbox</string>
+    <string name="favourites_text">Favourites</string>
 </resources>

@@ -4,14 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".gallery.GalleryActivity"
-    android:padding="10sp">
+    tools:context=".gallery.GalleryActivity">
 
+<!--    <com.google.android.material.navigation.NavigationView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:menu="@menu/navigation_drawer"/>-->
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/outdoor"
+        android:src="@drawable/gallerybackround"
         android:scaleType="fitXY"
         android:contentDescription="OUTDOOR" />
 
